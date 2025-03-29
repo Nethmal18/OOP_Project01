@@ -180,18 +180,19 @@ CREATE TABLE Attendance
 
 CREATE TABLE Notice
 (
-    notice_id INT NOT NULL,
+    notice_id INT AUTO_INCREMENT NOT NULL,
     t_id VARCHAR(10) NOT NULL,
-    notice_title VARCHAR(50),
-    notice_description VARCHAR(1000),
+    notice_title VARCHAR(1000),
+    notice_description TEXT,
     notice_date DATE,
     notice_type VARCHAR(20),
 
     CONSTRAINT PK_Notice PRIMARY KEY (notice_id),
-    CONSTRAINT CH_Notice CHECK (notice_type IN ('General', 'Urgent')),
+    CONSTRAINT CH_Notice CHECK (notice_type IN (N'General', N'Urgent')),
     CONSTRAINT FK_Notice FOREIGN KEY (t_id) REFERENCES Teacher(tc_id),
     CONSTRAINT CH_Notice_Std CHECK (t_id LIKE 'TC_____')
 );
+
 
 CREATE TABLE Resource
 (
@@ -279,3 +280,4 @@ CREATE TABLE Exam
     CONSTRAINT CH_Exam_Type CHECK (exam_type IN ('Midterm', 'Final', 'Quiz'))
 
 );
+
