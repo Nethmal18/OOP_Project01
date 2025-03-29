@@ -263,5 +263,19 @@ CREATE TABLE Permanant_Payment
 
 );
 
+CREATE TABLE Exam
+(
+    exam_id INT NOT NULL,
+    sub_id VARCHAR(10) NOT NULL,
+    exam_date DATE,
+    exam_duration INT,
+    exam_type VARCHAR(20), /*Midterm, Final, Quiz*/
+    exam_weight INT,
+    exam_description VARCHAR(1000),
 
+    CONSTRAINT PK_Exam PRIMARY KEY (exam_id),
+    CONSTRAINT FK_Exam_Subject FOREIGN KEY (sub_id) REFERENCES Subject(sub_id),
+    CONSTRAINT CH_Exam CHECK (sub_id LIKE '______'),
+    CONSTRAINT CH_Exam_Type CHECK (exam_type IN ('Midterm', 'Final', 'Quiz'))
 
+);
