@@ -280,3 +280,21 @@ CREATE TABLE Exam
     CONSTRAINT CH_Exam_Type CHECK (exam_type IN ('Midterm', 'Final', 'Quiz'))
 
 );
+
+
+/* New table (parent) */
+
+CREATE TABLE std_parent 
+(
+	std_id VARCHAR (10) NOT NULL,
+    name VARCHAR (20),
+    phone VARCHAR(10),
+    NIC VARCHAR (20),
+    occupation VARCHAR (50),
+    nationality VARCHAR(20),
+    
+    CONSTRAINT parent_pk PRIMARY KEY (std_id),
+    CONSTRAINT parent_fk FOREIGN KEY (std_id) REFERENCES student (std_id)
+    
+);
+
