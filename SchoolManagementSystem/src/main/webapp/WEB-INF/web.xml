@@ -12,6 +12,17 @@
     <url-pattern>/publishNotice</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>Teacher</servlet-name>
+    <servlet-class>com.school.Control.TeacherDashBoardServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  <servlet-name>Teacher</servlet-name>
+    <url-pattern>/TeacherDashBoardServlet</url-pattern>
+  </servlet-mapping>
+  
+  
  
   
 
