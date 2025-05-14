@@ -70,26 +70,42 @@
 #   --finance manager data insert--
 
  Insert into student_management.Finance_Manager values ('FM00001','Cost control',5 );
+ 
  Insert into student_management.Finance_Manager values ('FM00002','Risk management ',2 );
+ 
  Insert into student_management.Finance_Manager values ('FM00003','Invesment decisions ',4 );
+ 
  Insert into student_management.Finance_Manager values ('FM00004',' Budgeting',5 );
+ 
  Insert into student_management.Finance_Manager values ('FM00005',' Financial reporting',3 );
+ 
  Insert into student_management.Finance_Manager values ('FM00006',' Financial planing',4 );
 
   # -- INCOME AND EXPENSES--
+  
   CREATE TABLE incomes (
+  
     id INT AUTO_INCREMENT PRIMARY KEY,
+    
     income_type VARCHAR(100),
+    
     amount DOUBLE,
+    
     date DATE
     
     
 );
+
   CREATE TABLE expenses (
+  
     ex_id INT AUTO_INCREMENT PRIMARY KEY,
+    
     Expenses_type VARCHAR(100),
+    
     ex_amount DOUBLE,
+    
     date DATE
+    
     
 );
 
