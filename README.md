@@ -68,6 +68,7 @@
 
 
 #   --finance manager data insert--
+
  Insert into student_management.Finance_Manager values ('FM00001','Cost control',5 );
  Insert into student_management.Finance_Manager values ('FM00002','Risk management ',2 );
  Insert into student_management.Finance_Manager values ('FM00003','Invesment decisions ',4 );
@@ -81,13 +82,15 @@
     income_type VARCHAR(100),
     amount DOUBLE,
     date DATE
+    
+    
 );
-  Select*from student_management.incomes;
   CREATE TABLE expenses (
     ex_id INT AUTO_INCREMENT PRIMARY KEY,
     Expenses_type VARCHAR(100),
     ex_amount DOUBLE,
     date DATE
+    
 );
 
   
